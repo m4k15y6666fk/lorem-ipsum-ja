@@ -1,0 +1,18 @@
+{
+  "name": "lorem-ipsum-ja",
+  "module": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run index.mjs && cp --update src/*.txt dist/ && http-server dist --port 8080"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "jsdom": "^24.0.0",
+    "markdown-it": "^14.1.0"
+  }
+}
