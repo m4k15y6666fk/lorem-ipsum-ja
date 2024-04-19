@@ -7,6 +7,8 @@
 
 Home Page: [https://lorem-ipsum-ja.pages.dev](https://lorem-ipsum-ja.pages.dev)
 
+小説家になろう シリーズ: [https://ncode.syosetu.com/s9527h/](https://ncode.syosetu.com/s9527h/)
+
 GitHub repository: [https://github.com/m4k15y6666fk/lorem-ipsum-ja](https://github.com/m4k15y6666fk/lorem-ipsum-ja)
 
 ダミーテキストの文章はすべて [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) で提供されています。
