@@ -1,9 +1,11 @@
 {
   "name": "lorem-ipsum-ja",
+  "version": "0.1.0",
   "module": "index.mjs",
   "type": "module",
   "scripts": {
-    "dev": "bun run index.mjs && cp --update src/*.txt dist/ && http-server dist --port 8080"
+    "dev": "bun run index.mjs && cp --update src/*.txt dist/source/ && http-server dist --port 8080",
+    "build": "bun run index.mjs && cp --update src/*.txt dist/source/"
   },
   "devDependencies": {
     "@types/bun": "latest"

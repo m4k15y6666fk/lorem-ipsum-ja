@@ -120,7 +120,7 @@ out
 .nuxt
 dist
 
-!dist/.gitkeep
+!dist/source/.gitkeep
 
 # Gatsby files
 
