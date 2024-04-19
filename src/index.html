@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="日本語ダミーテキスト コレクション / Collection of Japanese Lorem Ipsum">
+    <meta name="description" content="プログラムのテスト等で使える、日本語の Lorem Ipsum（ダミーテキスト）のコレクション">
+    <meta name="keywords" content="ダミーテキスト,lorem ipsum">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Japanese">
+    <meta name="author" content="hiiro">
+
     <title>日本語ダミーテキスト コレクション / Collection of Japanese Lorem Ipsum</title>
 
     <script>
         window.addEventListener('DOMContentLoaded', async _ => {
             console.log("loaded");
 
-            const response = await fetch("a.txt");
+            const response = await fetch("source/a.txt");
             localStorage.setItem('original text', await response.text());
 
             const textarea = document.querySelector('#text-area');
@@ -37,7 +45,7 @@
                     textarea.style.borderColor = "red";
                 });
             });
-            document.querySelector('#download-button').addEventListener('click', async _ => {
+            document.querySelector('#download-button').addEventListener('click', _ => {
                 const file = new File([textarea.textContent], text.value, {
                     type: "text/plain",
                 });
@@ -53,11 +61,11 @@
 <body>
     <h1>日本語ダミーテキスト コレクション</h1>
     <h2>Collection of Japanese Lorem Ipsum</h2>
-    <p>version 1.0.0</p>
+    <p>version 0.1.0</p>
 
     <div>
-        <p>プログラムのテスト等で使える、日本語の Lorem Ipsum（ダミーテキスト）です。</p>
-        <p>GitHub リポジトリ: <a href="https://github.com/m4k15y6666fk/lorem-ipsum-ja" target="_blank" rel="noopener noreferrer">https://github.com/m4k15y6666fk/lorem-ipsum-ja</a></p>
+        <p>プログラムのテスト等で使える、日本語の Lorem Ipsum（ダミーテキスト）のコレクションです。</p>
+        <p>GitHub repository: <a href="https://github.com/m4k15y6666fk/lorem-ipsum-ja" target="_blank" rel="noopener noreferrer">https://github.com/m4k15y6666fk/lorem-ipsum-ja</a></p>
         <p xmlns:cc="http://creativecommons.org/ns#" >文章はすべて <a href="https://creativecommons.org/publicdomain/zero/1.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC0 1.0 Universal<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1" alt=""></a> で提供されています。</p>
     </div>
 
@@ -110,7 +118,7 @@
 
     <div>
         <button name="copy button" id="copy-button">コピー / copy</button>
-        <button name="copy button" id="download-button">ダウンロード / download</button>
+        <button name="download button" id="download-button">ダウンロード / download</button>
     </div>
 
     <hr>
