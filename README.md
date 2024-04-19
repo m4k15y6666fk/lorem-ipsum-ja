@@ -15,5 +15,5 @@ GitHub repository: [https://github.com/m4k15y6666fk/lorem-ipsum-ja](https://gith
 
 |ファイル名|文字数|文字数（改行・句読点を除く）|URL|特徴|
 |--------|-----|------------------------|---|---|
-|a.txt   |439  |393                     |[https://lorem-ipsum-ja.pages.dev/source/a.txt](https://lorem-ipsum-ja.pages.dev/a.txt)|平仮名をすべて（濁音・半濁音・小字 は区別しない）含んでいる文章|
+|a.txt   |439  |393                     |[https://lorem-ipsum-ja.pages.dev/source/a.txt](https://lorem-ipsum-ja.pages.dev/source/a.txt)|平仮名をすべて（濁音・半濁音・小字 は区別しない）含んでいる文章|
 |???     |???  |???                     |???|( coming soon... )|
