@@ -4,8 +4,9 @@
   "module": "index.mjs",
   "type": "module",
   "scripts": {
-    "dev": "bun run index.mjs && cp --update src/*.txt dist/source/ && http-server dist --port 8080",
-    "build": "bun run index.mjs && cp --update src/*.txt dist/source/"
+    "copy": "cp --update src/robots.txt dist/ && cp --update src/[a-z].txt dist/source/",
+    "dev": "bun run index.mjs && bun run copy && http-server dist --port 8080",
+    "build": "bun run index.mjs && bun run copy"
   },
   "devDependencies": {
     "@types/bun": "latest"
