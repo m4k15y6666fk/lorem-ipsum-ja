@@ -1,3 +1,7 @@
+---
+import Readme from '../../README.md';
+---
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -10,8 +14,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="Japanese">
     <meta name="author" content="hiiro">
+    <meta name="generator" content={Astro.generator} />
 
     <title>日本語ダミーテキスト コレクション / Collection of Japanese Lorem Ipsum</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- <link rel="manifest" href="/site.webmanifest"> -->
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,52 +39,9 @@
         https://milligram.io/
     -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="stylesheet" href="/css/dark.css">
 
-    <!-- https://github.com/milligram/milligram-themes/blob/main/examples/dark.css -->
-    <style media="(prefers-color-scheme: dark)">
-        /* Include this stylesheet after Milligram or merge it with your main.css */
-
-        body {
-            background: #2c2f34;
-            color: #f2f2f2;
-        }
-
-        .navigation .title,
-        .navigation-title {
-            color: #f2f2f2;
-        }
-
-        .navigation {
-            background: #34373c;
-            border-bottom: 0.1rem solid #1b1c1d;
-        }
-
-        .header {
-            background-color: #141518;
-        }
-
-        pre {
-            background: #141518;
-        }
-
-        .prettyprint {
-            color: #f2f2f2;
-        }
-
-        .prettyprint.lang-md * {
-            color: #f2f2f2 !important;
-        }
-
-        code {
-            background: #141518;
-        }
-
-        .prettyprint .atv {
-            color: rgba(73, 158, 223, 1);
-        }
-    </style>
-
-    <style media="(prefers-color-scheme: dark)">
+    <style media="(prefers-color-scheme: dark)" is:global>
         select:not([disabled]) {
             color: inherit;
         }
@@ -83,7 +52,7 @@
             color: inherit;
         }
     </style>
-    <style>
+    <style is:global>
         body {
             margin: 2.5%;
             font-family: 'Roboto', "Noto Sans JP", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
@@ -96,51 +65,7 @@
         }
     </style>
 
-
-    <script>
-        window.addEventListener('DOMContentLoaded', async _ => {
-            console.log("loaded");
-
-            const response = await fetch("source/a.txt");
-            localStorage.setItem('original text', await response.text());
-
-            const textarea = document.querySelector('#text-area');
-            const text = document.querySelector('#select-text');
-            //document.querySelector('#select-text').addEventListener('change', (e) => {
-            //    textarea.style.borderColor = "none";
-            //    const response = await fetch(e.target.value);
-            //    localStorage.setItem('original text', await response.text());
-            //});
-            document.querySelector('#select-newline').addEventListener('change', (e) => {
-                textarea.style.borderColor = "unset";
-                if (e.target.value == "true") {
-                    textarea.textContent = localStorage.getItem('original text');
-                } else {
-                    textarea.textContent = localStorage.getItem('original text').replace(/\n/g, '');
-                }
-            });
-
-            document.querySelector('#copy-button').addEventListener('click', async _ => {
-                navigator.clipboard.writeText(textarea.textContent)
-                .then(_ => {
-                    textarea.style.borderColor = "lightgreen";
-                })
-                .catch(_ => {
-                    textarea.style.borderColor = "red";
-                });
-            });
-            document.querySelector('#download-button').addEventListener('click', _ => {
-                const file = new File([textarea.textContent], text.value, {
-                    type: "text/plain",
-                });
-
-                const _a = document.createElement('a');
-                _a.href = URL.createObjectURL(file);
-                _a.setAttribute("download", text.value);
-                _a.click();
-            });
-        });
-    </script>
+    <script type="module" src="/main.js"></script>
 </head>
 <body>
     <h1>日本語ダミーテキスト コレクション</h1>
@@ -209,6 +134,8 @@
     <hr>
 
     <p>以下、<a href="https://github.com/m4k15y6666fk/lorem-ipsum-ja" target="_blank" rel="noopener noreferrer">https://github.com/m4k15y6666fk/lorem-ipsum-ja</a> より抜粋</p>
+
     <!-- ../README.md -->
+    <Readme />
 </body>
 </html>

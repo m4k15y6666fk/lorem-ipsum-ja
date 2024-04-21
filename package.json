@@ -1,12 +1,13 @@
 {
   "name": "lorem-ipsum-ja",
   "version": "0.1.0",
-  "module": "index.mjs",
   "type": "module",
   "scripts": {
-    "copy": "cp --update src/robots.txt dist/ && cp --update src/[a-z].txt dist/source/",
-    "dev": "bun run index.mjs && bun run copy && http-server dist --port 8080",
-    "build": "bun run index.mjs && bun run copy"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "devDependencies": {
     "@types/bun": "latest"
@@ -15,7 +16,6 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "jsdom": "^24.0.0",
-    "markdown-it": "^14.1.0"
+    "astro": "^4.6.3"
   }
 }
