@@ -5,11 +5,11 @@
 
 プログラムのテスト等で使える、日本語の Lorem Ipsum（ダミーテキスト）です。
 
-Home Page: [https://lorem-ipsum-ja.pages.dev](https://lorem-ipsum-ja.pages.dev)
+- Home Page: [https://lorem-ipsum-ja.pages.dev](https://lorem-ipsum-ja.pages.dev)
 
-小説家になろう: [https://ncode.syosetu.com/s9527h/](https://ncode.syosetu.com/s9527h/)
+- 小説家になろう: [https://ncode.syosetu.com/s9527h/](https://ncode.syosetu.com/s9527h/)
 
-Repository: [https://github.com/m4k15y6666fk/lorem-ipsum-ja](https://github.com/m4k15y6666fk/lorem-ipsum-ja)
+- GitHub: [https://github.com/m4k15y6666fk/lorem-ipsum-ja](https://github.com/m4k15y6666fk/lorem-ipsum-ja)
 
 ダミーテキストの文章はすべて [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/deed.ja) で提供されています。著作権フリーなので、ご自由にお使いください。
 
