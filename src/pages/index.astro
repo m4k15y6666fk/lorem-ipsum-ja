@@ -25,22 +25,31 @@ import Readme from '../../README.md';
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    -->
+
+    <!--
+        Water CSS
+        https://watercss.kognise.dev/
+        https://github.com/kognise/water.css
+    -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
 
     <!-- CSS Reset -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"> -->
 
     <!--
         Milligram CSS
         https://milligram.io/
     -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
-    <link rel="stylesheet" href="/css/dark.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"> -->
+    <!-- <link rel="stylesheet" href="/css/dark.css"> -->
 
+    <!--
     <style media="(prefers-color-scheme: dark)" is:global>
         select:not([disabled]) {
             color: inherit;
@@ -52,16 +61,27 @@ import Readme from '../../README.md';
             color: inherit;
         }
     </style>
+    -->
     <style is:global>
         body {
-            margin: 2.5%;
-            font-family: 'Roboto', "Noto Sans JP", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-            font-optical-sizing: auto;
+            /* margin: 2.5%; */
+            /* font-family: 'Roboto', "Noto Sans JP", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; */
+            /* font-optical-sizing: auto; */
         }
-        textarea {
-            width: 80%;
-            height: 50vh;
+        textarea#text-area {
+            max-width: 80%;
+            min-height: 50vh;
             resize: none;
+        }
+        textarea#text-area.copy-success {
+            border-style: solid;
+            border-width: thin;
+            border-color: lightgreen;
+        }
+        textarea#text-area.copy-error {
+            border-style: solid;
+            border-width: thin;
+            border-color: red;
         }
     </style>
 
@@ -73,7 +93,7 @@ import Readme from '../../README.md';
     <p>version 0.1.0</p>
 
     <div>
-        <p>プログラムのテスト等で使える、日本語の Lorem Ipsum（ダミーテキスト）のコレクション（著作権フリー）です。</p>
+        <p>プログラムのテスト等で使える、日本語の Lorem Ipsum（ダミーテキスト）のコレクションです。各テキストは著作権フリーなので、ご自由にお使いください。</p>
         <p>Repository: <a href="https://github.com/m4k15y6666fk/lorem-ipsum-ja" target="_blank" rel="noopener noreferrer">https://github.com/m4k15y6666fk/lorem-ipsum-ja</a></p>
         <p>小説家になろう: <a href="https://ncode.syosetu.com/s9527h/" target="_blank" rel="noopener noreferrer">https://ncode.syosetu.com/s9527h/</a></p>
         <p xmlns:cc="http://creativecommons.org/ns#" >文章はすべて <a href="https://creativecommons.org/publicdomain/zero/1.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC0 1.0 Universal<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1" alt=""></a> で提供されています。</p>
@@ -133,7 +153,7 @@ import Readme from '../../README.md';
 
     <hr>
 
-    <p>以下、<a href="https://github.com/m4k15y6666fk/lorem-ipsum-ja" target="_blank" rel="noopener noreferrer">https://github.com/m4k15y6666fk/lorem-ipsum-ja</a> より抜粋</p>
+    <p>&#8251; 以下、<a href="https://github.com/m4k15y6666fk/lorem-ipsum-ja" target="_blank" rel="noopener noreferrer">https://github.com/m4k15y6666fk/lorem-ipsum-ja</a> より抜粋</p>
 
     <!-- ../README.md -->
     <Readme />

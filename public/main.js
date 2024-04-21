@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', async _ => {
     //    localStorage.setItem('original text', await response.text());
     //});
     document.querySelector('#select-newline').addEventListener('change', (e) => {
-        textarea.style.borderColor = "unset";
+        textarea.setAttribute("class", "");
         if (e.target.value == "true") {
             textarea.textContent = localStorage.getItem('original text');
         } else {
@@ -22,12 +22,13 @@ window.addEventListener('DOMContentLoaded', async _ => {
     });
 
     document.querySelector('#copy-button').addEventListener('click', async _ => {
+        textarea.setAttribute("class", "");
         navigator.clipboard.writeText(textarea.textContent)
         .then(_ => {
-            textarea.style.borderColor = "lightgreen";
+            textarea.classList.add("copy-success");
         })
         .catch(_ => {
-            textarea.style.borderColor = "red";
+            textarea.classList.add("copy-error");
         });
     });
     document.querySelector('#download-button').addEventListener('click', _ => {
